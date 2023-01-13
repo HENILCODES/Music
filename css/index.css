@@ -106,7 +106,7 @@ body {
     margin-top: 30px;
 }
 .image1{
-    background:url(../img/imgEar.jpg);
+    background:url('/Music/storage/images/imgEar.jpg');
     height: 400px;
     margin: auto;
     width: 90%;
@@ -115,7 +115,7 @@ body {
 }
 
 .image2{
-    background:url(../img/Band.jpg);
+    background:url('/Music/storage/images/Band.jpg');
     height:450px;
     margin: auto;
     border-radius: 10px;
@@ -123,7 +123,7 @@ body {
     width: 90%;
 }
 .image3{
-    background:url(../img/Disco2.jpg);
+    background:url('/Music/storage/images/Disco2.jpg');
     height: 500px;
     margin: auto;
     width: 90%;

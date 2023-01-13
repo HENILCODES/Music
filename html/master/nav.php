@@ -20,7 +20,7 @@ include "/opt/lampp/htdocs/Music/database/connection.php";
         </div>
     </div>
     <div class="mov center">
-        <h2 class="log_name"><a href="/Music/html/home/" class="act">Music Site</a></h2>
+        <h2 class="log_name"><a href="/Music/html/home/" >Music Site</a></h2>
         <h2 class="aer"><i class="bi bi-list xl"></i></h2>
     </div>
     <div class="nav center" id="nav">
@@ -29,14 +29,24 @@ include "/opt/lampp/htdocs/Music/database/connection.php";
             <img src="/Music/storage/images/logo.jpg" class="imageP" alt="logo">
         </div>
         <div class="logo_name center">
-            <h1><a href="/Music/html/home/" class="active link">Music Site </a></h1>
+            <h1><a href="/Music/html/home/" class="active">Music Site </a></h1>
         </div>
         <div class="nav_link">
             <ul class="center">
                 <li><a href="/Music/html/home/" class="home link">Home</a></li>
                 <li><a href="/Music/html/music/" class="music link">Music</a></li>
                 <li><a href="/Music/html/music/upload/" class="upload link">Upload</a></li>
-                <li><a href="/Music/html/user/login/" class="link">Login</a></li>
+                <?php
+                if (isset($_SESSION['ActiveUserId'])) {
+                ?>
+                    <li><a href="/Music/app/user/logout.php?logout=true" name="logout" class="link">Logout</a></li>
+                <?php
+                } else {
+                ?>
+                    <li><a href="/Music/html/user/login/" class="link">Login</a></li>
+                <?php
+                }
+                ?>
             </ul>
         </div>
         <div class="FoT">

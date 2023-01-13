@@ -25,45 +25,6 @@
         </div>
 
         <div class="top">
-            <h2><i class="bi bi-star-fill"></i> Verifide Music</h2>
-        </div>
-        <div class="Mcontainer" id="Hindi">
-            <div class="main_box">
-                <div class="audio_box">
-                    <div class="Auimg">
-                        <img src="/Music/storage/images/audio.jpg">
-                    </div>
-                    <div class="audio">
-                        <audio src="Audios/Deva Shree Ganesha.mp3" controls preload="metadata"></audio>
-                    </div>
-                    <div class="audio_Detail">
-                        <h1>Deva Shree Ganesha Song</h1>
-                        <div class="user_U">
-                            <span class="user"><i class="bi bi-person"> Henil Code</i></span>
-                            <span class="Date"><i class="bi bi-calendar3"></i>28-May-2022<i class="bi bi-clock"></i>12:00 pm</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main_box">
-                <div class="audio_box">
-                    <div class="Auimg">
-                        <img src="/Music/storage/images/audio.jpg">
-                    </div>
-                    <div class="audio">
-                        <audio src="Audios/Naacho Naacho.mp3" controls preload="auto"></audio>
-                    </div>
-                    <div class="audio_Detail">
-                        <h1>RRR | Naacho Naacho Song</h1>
-                        <div class="user_U">
-                            <span class="user"><i class="bi bi-person"> Henil Code</i></span>
-                            <span class="Date"><i class="bi bi-calendar3"></i>28-May-2022<i class="bi bi-clock"></i>1:00 pm</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="top">
             <h2># Hindi Music</h2>
         </div>
         <div class="Mcontainer" id="Hindi">
@@ -78,7 +39,7 @@
                             <img src="/Music/storage/images/audio.jpg">
                         </div>
                         <div class="audio">
-                            <audio src="Audios/<?php echo $HAD['AUDIO_FILE'] ?>" controls preload="auto"></audio>
+                            <audio src="/Music/storage/Audios/<?php echo $HAD['AUDIO_FILE'] ?>" controls preload="auto"></audio>
                         </div>
                         <div class="audio_Detail">
                             <h1><?php echo $HAD['AUDIO_NAME'] ?></h1>
@@ -109,7 +70,7 @@
                             <img src="/Music/storage/images/audio.jpg">
                         </div>
                         <div class="audio">
-                            <audio src="Audios/<?php echo $EAD['AUDIO_FILE'] ?>" controls preload="auto"></audio>
+                            <audio src="/Music/storage/Audios/<?php echo $EAD['AUDIO_FILE'] ?>" controls preload="auto"></audio>
                         </div>
                         <div class="audio_Detail">
                             <h1><?php echo $EAD['AUDIO_NAME'] ?></h1>
@@ -140,7 +101,7 @@
                             <img src="/Music/storage/images/audio.jpg">
                         </div>
                         <div class="audio">
-                            <audio src="Audios/<?php echo $OAD['AUDIO_FILE'] ?>" controls preload="metadata"></audio>
+                            <audio src="/Music/storage/Audios/<?php echo $OAD['AUDIO_FILE'] ?>" controls preload="metadata"></audio>
                         </div>
                         <div class="audio_Detail">
                             <h1><?php echo $OAD['AUDIO_NAME'] ?></h1>

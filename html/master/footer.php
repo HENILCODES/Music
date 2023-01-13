@@ -4,10 +4,10 @@
     <div class="Bfooter center">
         <div class="nav_link">
             <ul class="center">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="music.php">Music</a></li>
-                <li><a href="upload.php">Upload</a></li>
-                <li><a href="UserLog.html">Login</a></li>
+                <li><a href="/Music/html/home/" class=" link">Home</a></li>
+                <li><a href="/Music/html/music/" class=" link">Music</a></li>
+                <li><a href="/Music/html/music/upload/" class=" link">Upload</a></li>
+                <li><a href="/Music/html/user/login/" class="link">Login</a></li>
             </ul>
         </div>
         <div class="icon center">

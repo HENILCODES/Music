@@ -11,21 +11,21 @@
 
 <body>
     <div class="mov center">
-        <h2 class="log_name"><a href="index.html">Music Site</a></h2>
+        <h2 class="log_name"><a href="/Music/html/home/">Music Site</a></h2>
     </div>
     <div class="Ma">
         <div class="container">
             <div class="top">
                 <h1 style="color: gold;">Sign up</h1>
             </div>
-            <form class="form center" method="post" action="LogInQuery.php">
+            <form class="form center" method="post" action="/Music/app/user/signup.php">
                 <div class="box">
                     <div class="bi bi-person"></div>
                     <input type="text" name="Uname" placeholder="User Name" required>
                 </div>
                 <div class="box">
                     <div class="bi bi-envelope"></div>
-                    <input type="email" name="Uemail" placeholder="Email Address" id="EM" required="required">
+                    <input type="email" name="Uemail" placeholder="email Address" required="required">
                 </div>
                 <div class="box">
                     <div class="bi bi-key"></div>

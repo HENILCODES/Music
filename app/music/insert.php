@@ -18,12 +18,12 @@ if (isset($_POST['Audio_upload'])) {
     ) {
         try {
             //code...
-            $AddMusic = move_uploaded_file($_FILES["Audio_file"]["tmp_name"], "Audios/" . $AD_file);
+            $AddMusic = move_uploaded_file($_FILES["Audio_file"]["tmp_name"], "/opt/lampp/htdocs/Music/storage/Audios/" . $AD_file);
             if ($AddMusic) {
                 $Upload_Query = "INSERT INTO audio_detail(USER_NAME, AUDIO_NAME, AUDIO_FILE, AUDIO_LANGUAGE, UPLOAD_DATE, UPLOAD_TIME) VALUES ('$AUser_name','$AD_name','$AD_file','$AD_language','$AD_date','$AD_time')";
                 $Query_exicut = mysqli_query($DB_CON, $Upload_Query);
                 if ($Query_exicut) {
-                    header("location:music.php");
+                    header("location: /Music/html/music/");
                 } else {
                     echo "Eror";
                 }
