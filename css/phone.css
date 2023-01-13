@@ -1,0 +1,105 @@
+
+.nav {
+    height: 100%;
+    position: fixed;
+    right: 0;
+    z-index: 22;
+    top: 0;
+    background-color: var(--back);
+    display: none;
+    width: 80%;
+    text-align: left;
+}
+.invite{
+    display: flex;
+}
+
+.nav_link {
+    margin-top: 26px;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.nav_link ul {
+    display: block;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.nav_link ul li a {
+    background-color: transparent;
+    text-decoration: double;
+    font-size: 25px;
+}
+
+.nav_logo {
+    padding: 18px 0;
+}
+
+.mov {
+    display: flex;
+    background-color: var(--back2);
+    width: 100%;
+    z-index: 20;
+    position: sticky;
+    top: 0;
+    padding: 13px 0;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 1px rgb(249, 238, 173);
+    box-shadow: 0 0 30px 5px black;
+}
+
+.mov .aer {
+    color: wheat;
+}
+
+.footer,
+.xl {
+    display: block;
+}
+
+.bi {
+    cursor: pointer;
+}
+
+.log_name {
+    font-size: 30px;
+    margin-left: 18px;
+    letter-spacing: 2px;
+    font-family: var(--logo);
+}
+
+.mov h2 i {
+    text-shadow: 1px 2px 10px white;
+}
+
+.FoT {
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    width: 100%;
+}
+.CoB{
+    margin-top: 20px;
+    font-size: 15px;
+    color: gray;
+}
+.footer{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+}
+.xl {
+    position: absolute;
+    right: 18px;
+    top: 5px;
+    font-size: 50px;
+}
+
+.xl:active {
+    color: red;
+}
+
+/* image */
+

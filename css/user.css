@@ -1,0 +1,131 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
+@import url("scrol.css");
+@import url("footer.css");
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    text-align: center;
+    justify-content: center;
+}
+
+body {
+    background-color: #121316;
+    cursor: default;
+    font-family: cursive;
+}
+
+.mov {
+    display: flex;
+    background-color: #2f3137;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+}
+a{
+    color: #d858c9;
+}
+.form{
+    margin-bottom: 25px;
+}
+.mov a {
+    text-decoration: none;
+    font-size: 35px;
+    color: rgb(250, 247, 242);
+    border-bottom: 4px double red;
+    font-family: monospace;
+}
+
+.box {
+    margin: auto;
+    display: flex;
+    border-radius: 15px;
+    background-color: #28292c;
+    width: 90%;
+    margin-bottom: 25px;
+    box-shadow: 0 0 5px white;
+}
+
+.box .bi {
+    padding: 7px 6px;
+    width: 40px;
+    font-size: 26px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.box input {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    background-color: #494c5375;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: rgb(35, 255, 90);
+    font-family: monospace;
+    transition: 0.5s;
+}
+.box input:hover {
+    box-shadow: 5px 0 5px 0 gold;
+}
+
+.box input:focus {
+    box-shadow: 5px 0 5px 0 rgb(4, 209, 83);
+}
+.logB {
+    font-size: 25px;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 50px;
+    border: none;
+    margin-top: 30px;
+    background-color: #13d110;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.logB:active{
+    transform: translateY(2px);
+    background-color: #6ed56c;
+}
+.logB:hover{
+    padding: 10px 60px;
+}
+.container {
+    box-shadow: 1px 5px 10px 2px rgb(206, 145, 145);
+    padding: 50px 0px;
+    display: block;
+    border-radius: 20px;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+.Ma{
+    margin-top: 60px;
+    margin-bottom: 200px;
+}
+@media only screen and (min-width: 900px){
+    .container {
+        width: 30%;
+     }
+     
+     .top {
+         padding-bottom: 50px;
+         font-size: 23px;
+     }
+}
+
+@media only screen and (max-width:900px) {
+    .container {
+        width: 95%;
+    }
+    .top {
+        padding-bottom: 40px;
+        font-size: 15px;
+    }
+}

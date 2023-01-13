@@ -1,0 +1,181 @@
+:root {
+    --back: hsl(233deg 12% 13%);
+    --back2: #2f3137;
+    --body-back: #121316;
+    --logo: monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: var(--body-back);
+    color: white;
+    cursor: default;
+}
+
+/* pre css */
+.center {
+    text-align: center;
+    justify-content: center;
+}
+
+.link:hover {
+    border-top: none;
+    transition: 0.5s;
+    border-bottom: 4px double rgb(236, 204, 60);
+}
+
+
+/* nav bar */
+.nav {
+    padding-bottom: 30px;
+    position: sticky;
+    transition: 0.8s;
+    width: 100%;
+    display: block;
+    background-color: var(--back);
+    box-shadow: 0 0 25px 5px black;
+}
+
+.nav_logo {
+    padding: 40px 0 20px 0;
+}
+.imageP{
+    background-size: cover;
+}
+.nav_logo img {
+    border: 3px solid rgb(252, 252, 252);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.logo_name h1 a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    padding: 5px;
+    font-family: var(--logo);
+}
+.nav_link{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.nav_link ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.nav_link ul li {
+    margin-top: 20px;
+}
+
+.nav_link ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 25px;
+    margin: 0 10px;
+    text-align: center;
+    letter-spacing: 0.2rem;
+}
+
+/* container */
+.container {
+    margin: 25px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.FoT,.xl,
+.mov {
+    display: none;
+}
+
+/* image */
+.image {
+    z-index: -1;
+    box-shadow: 0 0 5px 0 white;
+}
+.imgBox{
+    margin-top: 30px;
+}
+.image1{
+    background:url(../img/imgEar.jpg);
+    height: 400px;
+    margin: auto;
+    width: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.image2{
+    background:url(../img/Band.jpg);
+    height:450px;
+    margin: auto;
+    border-radius: 10px;
+    background-size: cover;
+    width: 90%;
+}
+.image3{
+    background:url(../img/Disco2.jpg);
+    height: 500px;
+    margin: auto;
+    width: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+.imgData{
+    font-size: 10px;
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.imgData h1{
+    padding-top:100px ;
+    background-color: rgb(1, 20, 50,0.5);
+    color: aqua;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+.imgData .ImBut{
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-top: 40px;
+    box-shadow: 0 0 20px 0 var(--back2);
+    color: gold;
+    font-weight: bold;
+    background-color: transparent;
+    border: 3px solid white;
+}
+.imgData .ImBut:hover{
+    background-color: #121316;
+    color: white;
+    box-shadow: 0 0 10px 0 white;
+}
+.imgData .ImBut:active{
+    background-color: gold;
+    color: #121316;
+}
+.invite{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    margin-right: 25px;
+    display: none;
+}
+.invite .i{
+    font-size: 35px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.invite .i:hover{
+    color: red;
+}
