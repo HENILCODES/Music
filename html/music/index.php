@@ -19,13 +19,23 @@
     <?php
     include "../master/nav.php";
     ?>
+     <div id="spiner">
+        <div class="loader_main">
+            <div class="loader">
+                <div class="loader loader3"></div>
+            </div>
+        </div>
+        <div class="load_title">
+            <h1>Please Wait Few Seconds...</h1>
+        </div>
+    </div>
     <div>
         <div class="head">
             <h1>Music Album</h1>
         </div>
 
         <div class="top">
-            <h2># Hindi Music</h2>
+            <h2># Hindi </h2>
         </div>
         <div class="Mcontainer" id="Hindi">
             <?php
@@ -56,7 +66,7 @@
         </div>
 
         <div class="top">
-            <h2># English Music</h2>
+            <h2># English </h2>
         </div>
         <div class="Mcontainer" id="English">
             <?php
@@ -87,7 +97,7 @@
         </div>
 
         <div class="top">
-            <h2># Other Music</h2>
+            <h2># Other</h2>
         </div>
         <div class="Mcontainer" id="other">
             <?php

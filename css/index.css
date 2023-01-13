@@ -12,6 +12,7 @@
 
 a {
     color: white;
+    text-decoration: none;
 }
 
 body {
@@ -46,7 +47,7 @@ body {
 }
 
 .nav_logo {
-    padding: 40px 0 20px 0;
+    padding: 23px 0 20px 0;
 }
 .imageP{
     background-size: cover;

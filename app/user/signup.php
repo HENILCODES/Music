@@ -2,45 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Music/css/error.css">
-    <title>Signup......</title>
+    <title>signup......</title>
 </head>
 
 <body>
     <?php
-    include "/opt/lampp/htdocs/Music/database/connection.php";
+    include "/opt/lampp/htdocs/Music/database/user.php";
+   
+    $signup = new user();
+    $ErrorDetail = false;
+
     if (isset($_POST['Sign_Up'])) {
         $name = $_POST['Uname'];
         $password = $_POST['Upassword'];
         $email = $_POST['Uemail'];
 
-        $SelectName = "SELECT * FROM user_detail WHERE USER = '$name'";
-        $QueryCheckName = mysqli_query($DB_CON, $SelectName);
-
-        $SelectEmail = "SELECT * FROM user_detail WHERE EMAIL ='$email'";
-        $QueryCheckEmail = mysqli_query($DB_CON, $SelectEmail);
+        $QueryCheckName = $signup->ChechkValue('USER', $name);
+        $QueryCheckEmail = $signup->ChechkValue('EMAIL', $email);
 
         if (mysqli_num_rows($QueryCheckName) > 0) {
-            $ErrorDetail = "User Name"." ' ".$name." '";
-            $error = true;
+            $ErrorDetail = "User Name" . " ' " . $name . " '";
         } else if (mysqli_num_rows($QueryCheckEmail) > 0) {
-            $ErrorDetail = "Email Address"." ' ".$email." '";
-            $error = true;
+            $ErrorDetail = "Email Address" . " ' " . $email . " '";
         } else {
-            $New_User_insert = "INSERT INTO user_detail (USER, PASSWORD, EMAIL) VALUES ('$name','$password','$email')";
-            $New_query_acept = mysqli_query($DB_CON, $New_User_insert);
-            if ($New_query_acept) {
+            $field = array('USER', 'PASSWORD', 'EMAIL');
+            $value = array($name, $password, $email);
+
+            $ResultQuery = $signup->Insert($field, $value);
+            if ($ResultQuery) {
                 header("location: /Music/html/user/login/");
             }
         }
     }
     ?>
+
+
     <div class="mainE">
         <?php
-        if ($error) {
+        if ($ErrorDetail) {
         ?>
             <h1><i class="bi bi-exclamation-triangle"></i> Sign Up Faild <i class="bi bi-exclamation-triangle"></i></h1>
             <div class="Da">

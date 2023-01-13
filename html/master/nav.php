@@ -9,18 +9,8 @@ include "/opt/lampp/htdocs/Music/database/connection.php";
 <link rel="stylesheet" href="/Music/css/scrol.css">
 
 <div>
-    <div id="spiner">
-        <div class="loader_main">
-            <div class="loader">
-                <div class="loader loader3"></div>
-            </div>
-        </div>
-        <div class="load_title">
-            <h1>Please Wait Few Seconds...</h1>
-        </div>
-    </div>
     <div class="mov center">
-        <h2 class="log_name"><a href="/Music/html/home/" >Music Site</a></h2>
+        <h2 class="log_name"><a href="/Music/html/home/" class="link">Music Site</a></h2>
         <h2 class="aer"><i class="bi bi-list xl"></i></h2>
     </div>
     <div class="nav center" id="nav">
