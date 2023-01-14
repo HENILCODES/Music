@@ -12,7 +12,7 @@ class Music extends connection
     }
     function SelectMusic()
     {
-        $Querys = "SELECT users.name AS user_name,musics.name AS music_name,musics.language,musics.file,musics.timestamp FROM musics INNER JOIN users ON musics.users_id = users.id";
+        $Querys = "SELECT users.name AS user_name,musics.name AS music_name,musics.language,musics.file,musics.timestamp FROM musics INNER JOIN users ON musics.users_id = users.id order by musics.id desc";
         return mysqli_query($this->StartConnection(), $Querys);
     }
     function Delete($id)

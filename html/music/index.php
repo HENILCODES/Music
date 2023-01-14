@@ -22,30 +22,43 @@
     <div class="container">
         <div class="Group">
             <div class="box-group">
-                <?php
-                include "../../app/music/Music.php";
-                $musics = new Music();
-                $Result_select = $musics->SelectMusic();
-                while ($rows = mysqli_fetch_assoc($Result_select)) {
-                ?>
-                    <div class="Music-box">
-                        <div class="titel">
-                            <span><?php echo $rows['music_name'];?></span>
-                        </div>
-                        <div class="language">
-                            <?php echo $rows['language']; ?>
-                        </div>
-                        <div class="user-details">
-                            <span><?php echo $rows['user_name'] ?></span>
-                            <span><?php echo $rows['timestamp'] ?></span>
-                        </div>
-                        <div class="likes">
-                            1
+                <div class="filter-group">
+                    <div class="filter">
+                        <div class="search-box">
+                            <input class="search" type="search" placeholder="find music ....">
                         </div>
                     </div>
-                <?php
-                }
-                ?>
+                </div>
+                <div class="music-group">
+                    <?php
+                    include "../../app/music/Music.php";
+                    $musics = new Music();
+                    $Result_select = $musics->SelectMusic();
+                    while ($rows = mysqli_fetch_assoc($Result_select)) {
+                    ?>
+                        <div class="Music-box">
+                            <div class="titel">
+                                <div class="music-name">
+                                    <span><?php echo $rows['music_name']; ?></span>
+                                </div>
+                                <div class="author">
+                                    <span><?php echo $rows['user_name'] ?></span>
+                                </div>
+                            </div>
+                            <div class="language">
+                                <?php echo $rows['language']; ?>
+                            </div>
+                            <div class="user-details">
+                                <span><?php echo $rows['timestamp'] ?></span>
+                            </div>
+                            <div class="likes">
+                                <audio src="/Music/storage/Audios/16736046501666354678Money heist ringtone.mp3" controls></audio>
+                            </div>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>

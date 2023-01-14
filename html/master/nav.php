@@ -3,7 +3,8 @@
 <link rel="stylesheet" href="/Music/css/phone.css" media="screen and (max-width: 1000px)">
 <link rel="stylesheet" href="/Music/css/spiner.css">
 <link rel="stylesheet" href="/Music/css/scrol.css">
-
+<div class="imageBack">
+    </div>
 <div>
     <div class="mov center">
         <h2 class="log_name"><a href="/Music/html/home/" class="link">Music Site</a></h2>

@@ -1,11 +1,36 @@
 .container .Group {
   padding: 10px;
 }
+.box-group {
+  width: 70%;
+  margin: auto;
+}
+.search {
+  padding: 10px 20px 10px 10px;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  font-size: 25px;
+  box-shadow: -2px 1px 9px 0px #40651f;
+  border: none;
+  border-radius: 10px;
+}
+.filter-group,
+.search-box {
+  margin: 50px 0 50px 0;
+}
 .Music-box {
   display: flex;
+  box-shadow: inset -2px -5px 18px 0px #502b2b;
+  border-radius: 0px 0 20px 0;
+  padding: 35px 20px 35px 20px;
+  justify-content: space-evenly;
+  margin-top: 15px;
 }
+
+
 audio::-webkit-media-controls-panel {
-  background-color: #8d8b88;
+  background-color: #363534;
   border: 0;
   outline: none;
 }
