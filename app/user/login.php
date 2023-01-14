@@ -9,21 +9,22 @@
     <title>Checking.....</title>
 </head>
 <?php
-include "user.php";
-$login = new user();
+include "User.php";
+$login = new User();
 
 if (isset($_POST['Login_User'])) {
     $UserName = $_POST['Uname'];
     $UserPassword = $_POST['Upassword'];
 
-    $field = array('USER', 'PASSWORD');
+    $field = array('name', 'password');
     $value = array($UserName, $UserPassword);
 
     $CheckQuery = $login->Login($field, $value);
-
+    $Fetch_Value = mysqli_fetch_array($CheckQuery);
+    
     if (mysqli_num_rows($CheckQuery) > 0) {
         session_start();
-        $_SESSION['ActiveUserId'] = $UserName;
+        $_SESSION['ActiveUserId'] = $Fetch_Value['id'];
         header("location: /Music/html/music/upload/");
     } else {
         $Error = true;

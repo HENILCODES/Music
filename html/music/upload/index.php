@@ -30,7 +30,6 @@
                     <label for="SngName" class="bi bi-hash"></label>
                     <input type="text" id="SngName" name="Music_Name" placeholder="Music Name" autocomplete="off" required>
                 </div>
-                <input type="hidden" value="<?php echo $_SESSION['ActiveUserId'] ?>" name="username">
                 <div class="box">
                     <label for="AuDfile" class="bi bi-music-note"></label>
                     <input type="file" name="Audio_file" id="AuDfile" required accept="audio/*">

@@ -9,9 +9,8 @@
 
 <body>
     <?php
-    include "/opt/lampp/htdocs/Music/database/user.php";
-   
-    $signup = new user();
+    include "User.php";
+    $signup = new User();
     $ErrorDetail = false;
 
     if (isset($_POST['Sign_Up'])) {
@@ -19,18 +18,18 @@
         $password = $_POST['Upassword'];
         $email = $_POST['Uemail'];
 
-        $QueryCheckName = $signup->ChechkValue('USER', $name);
-        $QueryCheckEmail = $signup->ChechkValue('EMAIL', $email);
+        $QueryCheckName = $signup->ChechkValue('name', $name);
+        $QueryCheckEmail = $signup->ChechkValue('email', $email);
 
         if (mysqli_num_rows($QueryCheckName) > 0) {
             $ErrorDetail = "User Name" . " ' " . $name . " '";
         } else if (mysqli_num_rows($QueryCheckEmail) > 0) {
             $ErrorDetail = "Email Address" . " ' " . $email . " '";
         } else {
-            $field = array('USER', 'PASSWORD', 'EMAIL');
+            $field = array('name', 'password', 'email');
             $value = array($name, $password, $email);
 
-            $ResultQuery = $signup->Insert($field, $value);
+            $ResultQuery = $signup->Signup($field, $value);
             if ($ResultQuery) {
                 header("location: /Music/html/user/login/");
             }

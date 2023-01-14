@@ -111,6 +111,9 @@ input[type=file]::-webkit-file-upload-button {
     color: white;
     text-align: center;
 }
+input[type='file']{
+    cursor: pointer;
+}
 @media only screen and (min-width: 900px) {
     .Music_container {
         width: 30%;
