@@ -10,4 +10,14 @@ class Music extends connection
         echo $Querys;
         return mysqli_query($this->StartConnection(), $Querys);
     }
+    function SelectMusic()
+    {
+        $Querys = "SELECT users.name AS user_name,musics.name AS music_name,musics.language,musics.file,musics.timestamp FROM musics INNER JOIN users ON musics.users_id = users.id";
+        return mysqli_query($this->StartConnection(), $Querys);
+    }
+    function Delete($id)
+    {
+        $Querys = "delete from musics where id = $id";
+        return mysqli_query($this->StartConnection(), $Querys);
+    }
 }

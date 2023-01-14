@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    setTimeout(endReload, 1000);
+    // setTimeout(endReload, 1000);
 
     $('.aer').click(function () {
         $(".nav").show();
@@ -9,6 +9,6 @@ $(document).ready(function () {
     });
 });
 
-function endReload(){
-    document.getElementById("spiner").remove();
-}
+// function endReload(){
+//     document.getElementById("spiner").remove();
+// }

@@ -16,15 +16,14 @@ if (isset($_POST['Login_User'])) {
     $UserName = $_POST['Uname'];
     $UserPassword = $_POST['Upassword'];
 
-    $field = array('name', 'password');
-    $value = array($UserName, $UserPassword);
+    $value = array("name" => $UserName, "password" => $UserPassword);
 
-    $CheckQuery = $login->Login($field, $value);
-    $Fetch_Value = mysqli_fetch_array($CheckQuery);
-    
+    $CheckQuery = $login->Login($value);
+    $FetchValue = mysqli_fetch_array($CheckQuery);
+
     if (mysqli_num_rows($CheckQuery) > 0) {
         session_start();
-        $_SESSION['ActiveUserId'] = $Fetch_Value['id'];
+        $_SESSION['ActiveUserId'] = $FetchValue['id'];
         header("location: /Music/html/music/upload/");
     } else {
         $Error = true;

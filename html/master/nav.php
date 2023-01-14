@@ -1,7 +1,3 @@
-<?php
-include "/opt/lampp/htdocs/Music/database/connection.php";
-?>
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 <link rel="stylesheet" href="/Music/css/index.css">
 <link rel="stylesheet" href="/Music/css/phone.css" media="screen and (max-width: 1000px)">

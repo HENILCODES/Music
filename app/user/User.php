@@ -3,20 +3,25 @@ include "/opt/lampp/htdocs/Music/database/connection.php";
 
 class User extends connection
 {
-    function ChechkValue($fild, $value)
+    function ChechkOneValue($fild, $value)
     {
         $query = "select * from users where $fild = '$value'";
         return mysqli_query($this->StartConnection(), $query);
     }
-    function Login($fild, $value)
+    function Login($value)
     {
-        $query = "select * from users where $fild[0] = '$value[0]' AND $fild[1] = '$value[1]'";
+        $query = "select * from users where name = '$value[name]' AND password = '$value[password]'";
         return mysqli_query($this->StartConnection(), $query);
     }
-    function Signup($field, $value)
+    function Signup($value)
     {
-        $query = "insert into users ($field[0],$field[1],$field[2]) values ('$value[0]','$value[1]','$value[2]')";
+        $query = "insert into users (name,email,password) values ('$value[name]','$value[email]','$value[password]')";
         echo $query;
         return mysqli_query($this->StartConnection(), $query);
+    }
+    function Delete($id)
+    {
+        $Querys = "delete from users where id = $id";
+        return mysqli_query($this->StartConnection(), $Querys);
     }
 }

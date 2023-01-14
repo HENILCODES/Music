@@ -23,12 +23,12 @@
     <div class="Ma">
         <div class="Music_container">
             <div class="top">
-                <h1 style="color:Gold ;"> Upload Music </h1>
+                <h1 style="color:#d86be7;"> Upload Music </h1>
             </div>
             <form class="form center" enctype="multipart/form-data" method="post" onsubmit="MusicUpload()" action="/Music/app/music/insert.php">
                 <div class="box">
-                    <label for="SngName" class="bi bi-hash"></label>
-                    <input type="text" id="SngName" name="Music_Name" placeholder="Music Name" autocomplete="off" required>
+                    <label for="SongName" class="bi bi-hash"></label>
+                    <input type="text" id="SongName" maxlength="25" name="Music_Name" placeholder="Music Name" autocomplete="off" required>
                 </div>
                 <div class="box">
                     <label for="AuDfile" class="bi bi-music-note"></label>
@@ -62,7 +62,7 @@ include "../../master/footer.php";
 ?>
 <script>
     function MusicUpload(){
-        var FN = document.getElementById("SngName").value;
+        var FN = document.getElementById("SongName").value;
         var AD = document.getElementById("AuDfile").value;
         if (FN == "" || AD == "") {
             console.log("Required All Fild");

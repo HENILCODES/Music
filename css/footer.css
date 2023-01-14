@@ -1,10 +1,13 @@
-
+.space{
+    margin: 10px 0 25px 0;
+    height: 10px;
+}
 .FooterB {
     display: block;
     width: 100%;
     background-color: #28292c;
     padding-bottom: 10px;
-    margin-top: 150px;
+    /* margin-top: 150px; */
     color: rgb(158, 151, 151);
 }
 .botF{

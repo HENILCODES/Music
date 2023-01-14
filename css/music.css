@@ -1,3 +1,9 @@
+.container .Group {
+  padding: 10px;
+}
+.Music-box {
+  display: flex;
+}
 audio::-webkit-media-controls-panel {
   background-color: #8d8b88;
   border: 0;

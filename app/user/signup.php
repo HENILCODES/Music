@@ -18,18 +18,17 @@
         $password = $_POST['Upassword'];
         $email = $_POST['Uemail'];
 
-        $QueryCheckName = $signup->ChechkValue('name', $name);
-        $QueryCheckEmail = $signup->ChechkValue('email', $email);
+        $QueryCheckName = $signup->ChechkOneValue('name', $name);
+        $QueryCheckEmail = $signup->ChechkOneValue('email', $email);
 
         if (mysqli_num_rows($QueryCheckName) > 0) {
             $ErrorDetail = "User Name" . " ' " . $name . " '";
         } else if (mysqli_num_rows($QueryCheckEmail) > 0) {
             $ErrorDetail = "Email Address" . " ' " . $email . " '";
         } else {
-            $field = array('name', 'password', 'email');
-            $value = array($name, $password, $email);
+            $value = array("name" => $name, "password" => $password, "email" => $email);
 
-            $ResultQuery = $signup->Signup($field, $value);
+            $ResultQuery = $signup->Signup($value);
             if ($ResultQuery) {
                 header("location: /Music/html/user/login/");
             }

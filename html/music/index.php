@@ -19,6 +19,36 @@
     <?php
     include "../master/nav.php";
     ?>
+    <div class="container">
+        <div class="Group">
+            <div class="box-group">
+                <?php
+                include "../../app/music/Music.php";
+                $musics = new Music();
+                $Result_select = $musics->SelectMusic();
+                while ($rows = mysqli_fetch_assoc($Result_select)) {
+                ?>
+                    <div class="Music-box">
+                        <div class="titel">
+                            <span><?php echo $rows['music_name'];?></span>
+                        </div>
+                        <div class="language">
+                            <?php echo $rows['language']; ?>
+                        </div>
+                        <div class="user-details">
+                            <span><?php echo $rows['user_name'] ?></span>
+                            <span><?php echo $rows['timestamp'] ?></span>
+                        </div>
+                        <div class="likes">
+                            1
+                        </div>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+    </div>
 
 </body>
 <?php

@@ -18,7 +18,7 @@
             <div class="top">
                 <h1 style="color: gold;">Sign up</h1>
             </div>
-            <form class="form center" method="post" action="/Music/app/user/signup.php">
+            <form class="form center" method="post" autocomplete="off" action="/Music/app/user/signup.php">
                 <div class="box">
                     <div class="bi bi-person"></div>
                     <input type="text" name="Uname" placeholder="User Name" required>

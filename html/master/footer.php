@@ -1,13 +1,13 @@
 <link rel="stylesheet" href="/Music/css/footer.css">
-
+<div class="space"></div>
 <div class="FooterB center">
     <div class="Bfooter center">
         <div class="nav_link">
             <ul class="center">
-                <li><a href="/Music/html/home/" class="link">Home</a></li>
-                <li><a href="/Music/html/music/" class="link">Music</a></li>
-                <li><a href="/Music/html/music/upload/" class="link">Upload</a></li>
-                <!-- <li><a href="/Music/html/user/login/" class="link">Login</a></li> -->
+                <li><a href="/Music/html/home/">Home</a></li>
+                <li><a href="/Music/html/music/">Music</a></li>
+                <li><a href="/Music/html/music/upload/">Upload</a></li>
+                <!-- <li><a href="/Music/html/user/login/">Login</a></li> -->
             </ul>
         </div>
         <div class="icon center">
