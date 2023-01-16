@@ -31,7 +31,7 @@ $totalUsers = mysqli_fetch_array($getUsers);
             </div>
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 flex-wrap justify-content-evenly">
                 <div class="col mb-5">
-                    <a href="../product/" class="text-decoration-none">
+                    <a href="music/" class="text-decoration-none">
                         <div class="col bg-primary shadow-lg rounded-4" style="width: 250px;">
                             <div class="pt-5 pe-5 ps-5">
                                 <p class="d-flex align-items-center text-white justify-content-center fs-1 fw-bolder"><?php echo count($totalMusic); ?></p>
@@ -43,7 +43,7 @@ $totalUsers = mysqli_fetch_array($getUsers);
                     </a>
                 </div>
                 <div class="col mb-5">
-                    <a href="../product/" class="text-decoration-none">
+                    <a href="users/" class="text-decoration-none">
                         <div class="col bg-primary shadow-lg rounded-4" style="width: 250px;">
                             <div class="pt-5 pe-5 ps-5">
                                 <p class="d-flex align-items-center text-white justify-content-center fs-1 fw-bolder"><?php echo count($totalUsers);?> </p>
