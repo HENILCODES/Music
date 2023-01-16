@@ -37,7 +37,7 @@
                     while ($rows = mysqli_fetch_assoc($Result_select)) {
                     ?>
                         <div class="Music-box">
-                            <div class="titel">
+                            <div class="Music-titel">
                                 <div class="music-name">
                                     <span><?php echo $rows['music_name']; ?></span>
                                 </div>

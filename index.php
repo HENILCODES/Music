@@ -15,7 +15,7 @@
 </style>
 <body>
     <?php
-        include "../master/nav.php";
+        include "html/master/nav.php";
     ?>
     <div class="invite">
         <a href="whatsapp://send?text= Let's listen Music on Music Site http://henil.42web.io/music_site/   And also Upload Your Music  Web-Site."
@@ -43,13 +43,13 @@
             <div class="image3 image">
                 <div class="imgData">
                     <h1 class="h1"> That Web-Site has some music. <br> You can also Download Music.</h1>
-                    <a href="Usersign.html"><button class="ImBut">Sign Up</button></a>
+                    <a href="Undersign.html"><button class="ImBut">Sign Up</button></a>
                 </div>
             </div>
         </div>
     </div>
     <?php
-        include "../master/footer.php";
+        include "html/master/footer.php";
     ?>
 </body>
 </html>

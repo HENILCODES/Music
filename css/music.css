@@ -19,13 +19,27 @@
 .search-box {
   margin: 50px 0 50px 0;
 }
+.Music-titel{
+  padding-left: 40px;
+  width: 350px;
+}
+.language{
+  width: 100px;
+  text-align: center;
+}
 .Music-box {
   display: flex;
   box-shadow: inset -2px -5px 18px 0px #502b2b;
   border-radius: 0px 0 20px 0;
   padding: 35px 20px 35px 20px;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 15px;
+}
+.music-name{
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  color: gold;
+  text-transform: capitalize;
 }
 
 
