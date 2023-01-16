@@ -1,5 +1,4 @@
 <?php
-include "/opt/lampp/htdocs/Music/database/connection.php";
 
 class Music extends connection
 {

@@ -11,7 +11,7 @@
 
 <body>
     <div class="mov center">
-        <h2 class="log_name"><a href="/Music/html/home/">Music Site</a></h2>
+        <h2 class="log_name"><a href="/Music/">Music Site</a></h2>
     </div>
     <div class="Ma">
         <div class="container">

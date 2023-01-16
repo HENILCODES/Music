@@ -5,7 +5,10 @@
 <link rel="stylesheet" href="/Music/css/scrol.css">
 <div class="imageBack">
 </div>
+<?php
+include "/opt/lampp/htdocs/Music/database/connection.php";
 
+?>
 <div class="mov center">
     <h2 class="log_name"><a href="/Music/" class="link">Music Site</a></h2>
     <h2 class="aer"><i class="bi bi-list xl"></i></h2>

@@ -5,3 +5,8 @@ if (isset($_REQUEST['logout'])) {
     header("location: /Music/html/user/login/");
 
 }
+if (isset($_REQUEST['logoutAdmin'])) {
+    unset($_SESSION['ActiveUserId']);
+    header("location: /Music/html/user/login/");
+
+}
