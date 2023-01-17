@@ -23,7 +23,7 @@ if (isset($_POST['Audio_upload'])) {
 
                 $InsertValue = array("name" => $MusicName, "language" => $MusicLanguage, "file" => $MusicFile, "user_id" => $_SESSION['ActiveUserId'], "timestamp" => $MusicTimeStamp);
 
-                $Query_excute = $Upload->Upload($InsertValue);
+                $Query_excute = $Upload->upload($InsertValue);
 
                 if ($Query_excute) {
                     header("location: /Music/html/music/");

@@ -18,11 +18,11 @@ if (isset($_POST['Login_User'])) {
 
 
     $value = array("name" => $UserName, "password" => $UserPassword);
-    $CheckQuery = $login->Login($value);
+    $CheckQuery = $login->login($value);
     $FetchValue = mysqli_fetch_array($CheckQuery);
 
     if (mysqli_num_rows($CheckQuery) > 0) {
-        $checkOne = $login->ChechkOneValue("name", $UserName);
+        $checkOne = $login->chechkOneValue("name", $UserName);
         $type = mysqli_fetch_array($checkOne);
         if ($type['type'] == "user") {
             $_SESSION['ActiveUserId'] = $FetchValue['id'];

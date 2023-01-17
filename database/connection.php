@@ -1,7 +1,7 @@
 <?php
 session_start();
-class connection{
-    function StartConnection(){
+trait connection{
+    function startConnection(){
         return mysqli_connect("localhost","root","","project");
     }
 }

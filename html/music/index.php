@@ -33,7 +33,7 @@
                     <?php
                     include "../../app/music/Music.php";
                     $musics = new Music();
-                    $Result_select = $musics->SelectMusic();
+                    $Result_select = $musics->selectMusic();
                     while ($rows = mysqli_fetch_assoc($Result_select)) {
                     ?>
                         <div class="Music-box">

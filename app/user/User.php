@@ -1,27 +1,31 @@
 <?php
 include "/opt/lampp/htdocs/Music/database/connection.php";
 
-class User extends connection
+class User
 {
-    function ChechkOneValue($fild, $value)
+    use connection;
+    function chechkOneValue($fild, $value)
     {
         $query = "select * from users where $fild = '$value'";
-        return mysqli_query($this->StartConnection(), $query);
+        return mysqli_query($this->startConnection(), $query);
     }
-    function Login($value)
+    function login($value)
     {
         $query = "select * from users where name = '$value[name]' AND password = '$value[password]'";
-        return mysqli_query($this->StartConnection(), $query);
+        return mysqli_query($this->startConnection(), $query);
     }
-    function Signup($value)
+    function signup($value)
     {
         $query = "insert into users (name,email,password) values ('$value[name]','$value[email]','$value[password]')";
         echo $query;
-        return mysqli_query($this->StartConnection(), $query);
+        return mysqli_query($this->startConnection(), $query);
     }
-    function Delete($id)
+    function delete($id)
     {
+        $music = "delete from musics where users_id =$id ";
+        mysqli_query($this->startConnection(), $music);
+        
         $Querys = "delete from users where id = $id";
-        return mysqli_query($this->StartConnection(), $Querys);
+        return mysqli_query($this->startConnection(), $Querys);
     }
 }

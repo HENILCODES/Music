@@ -26,7 +26,8 @@
             </div>
             <div class="text-end pb-4 d-flex justify-content-between">
                 <input type="search" autocomplete="off" class="form-control w-25 me-5" id="search" placeholder="search">
-                <button class="btn btn-success shadow" data-bs-toggle="modal" data-bs-target="#AddAdmin">Add</button>
+                <a href="/Music/html/user/signup/" class="btn btn-success shadow">Add</a>
+
             </div>
             <div class="overflow-auto" style="height: 600px;">
 
@@ -50,7 +51,7 @@
                                 <td><?php echo $fetchArray['password'] ?></td>
                                 <td><?php echo $fetchArray['timestamp'] ?></td>
                                 <td>
-                                    <a href="/Music/app/music/delete.php?User_id=<?php echo $fetchArray['id']; ?>" class="btn btn-danger bi bi-trash"></a>
+                                    <a href="/Music/app/user/delete.php?User_id=<?php echo $fetchArray['id']; ?>" class="btn btn-danger bi bi-trash"></a>
                                 </td>
                             </tr>
                         <?php

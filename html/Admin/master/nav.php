@@ -14,7 +14,10 @@ include "/opt/lampp/htdocs/Music/database/adminsecurity.php";
 
         <ul class="navbar-nav me-auto ">
             <li class="nav-item">
-                <a href="/Music/html/Admin/order/" class="nav-link fs-5">Order</a>
+                <a href="/Music/html/Admin/music/" class="nav-link fs-5">Music</a>
+            </li>
+            <li class="nav-item">
+                <a href="/Music/html/Admin/users/" class="nav-link fs-5">User</a>
             </li>
         </ul>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

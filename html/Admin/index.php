@@ -15,13 +15,12 @@ include "master/nav.php";
 include "/opt/lampp/htdocs/Music/app/admin/Admin.php";
 
 $Admin = new Admin();
-$getMusic = $Admin->getAll('musics');
+$getMusic = $Admin->countTotlaRecored('musics');
 $totalMusic = mysqli_fetch_array($getMusic);
-// print_r($totalMusic);
 
-$getUsers = $Admin->getAll('users');
+$getUsers = $Admin->countTotlaRecored('users');
 $totalUsers = mysqli_fetch_array($getUsers);
-// print_r($totalUsers);
+
 ?>
 <div class="container">
     <section style="background-color: #eee;" class="shadow ps-5 pe-5">
@@ -34,7 +33,7 @@ $totalUsers = mysqli_fetch_array($getUsers);
                     <a href="music/" class="text-decoration-none">
                         <div class="col bg-primary shadow-lg rounded-4" style="width: 250px;">
                             <div class="pt-5 pe-5 ps-5">
-                                <p class="d-flex align-items-center text-white justify-content-center fs-1 fw-bolder"><?php echo count($totalMusic); ?></p>
+                                <p class="d-flex align-items-center text-white justify-content-center fs-1 fw-bolder"><?php echo $totalMusic['total'] ?></p>
                             </div>
                             <div class="text-center pb-5 pt-auto">
                                 <p class="btn btn-info fw-bold">Music</p>
@@ -46,7 +45,7 @@ $totalUsers = mysqli_fetch_array($getUsers);
                     <a href="users/" class="text-decoration-none">
                         <div class="col bg-primary shadow-lg rounded-4" style="width: 250px;">
                             <div class="pt-5 pe-5 ps-5">
-                                <p class="d-flex align-items-center text-white justify-content-center fs-1 fw-bolder"><?php echo count($totalUsers);?> </p>
+                                <p class="d-flex align-items-center text-white justify-content-center fs-1 fw-bolder"><?php echo $totalUsers['total'];?> </p>
                             </div>
                             <div class="text-center pb-5 pt-auto">
                                 <p class="btn btn-info fw-bold">Users</p>
