@@ -22,7 +22,7 @@
         <div class="container my-5 py-4">
 
             <div class="text-center">
-                <h2 class="fw-bold">Admin</h2>
+                <h2 class="fw-bold">Users</h2>
             </div>
             <div class="text-end pb-4 d-flex justify-content-between">
                 <input type="search" autocomplete="off" class="form-control w-25 me-5" id="search" placeholder="search">
@@ -33,22 +33,24 @@
 
                 <table class="table table-primary text-center table-responsive table-bordered">
                     <thead class="table-borderless table-dark">
-                        <th>ID</th>
+                        <th>No</th>
                         <th>Name</th>
-                        <th>language</th>
-                        <th>audio</th>
+                        <th>Email</th>
+                        <th>Role</th>
                         <th>time</th>
                         <th>Action</th>
                     </thead>
                     <tbody id="Search_table" class="overflow-auto">
                         <?php
+                        $i=0;
                         while ($fetchArray = mysqli_fetch_array($resultMusic)) {
+                        $i++;
                         ?>
                             <tr>
-                                <td><?php echo $fetchArray['id'] ?></td>
+                                <td><?php echo $i ?></td>
                                 <td><?php echo $fetchArray['name'] ?></td>
                                 <td><?php echo $fetchArray['email'] ?></td>
-                                <td><?php echo $fetchArray['password'] ?></td>
+                                <td><?php echo $fetchArray['type'] ?></td>
                                 <td><?php echo $fetchArray['timestamp'] ?></td>
                                 <td>
                                     <a href="/Music/app/user/delete.php?User_id=<?php echo $fetchArray['id']; ?>" class="btn btn-danger bi bi-trash"></a>

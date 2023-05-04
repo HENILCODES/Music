@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="/Music/css/phone.css" media="screen and (max-width: 1000px)">
 <link rel="stylesheet" href="/Music/css/spiner.css">
 <link rel="stylesheet" href="/Music/css/scrol.css">
+<link rel="shortcut icon" href="favicon.ico"icon">
 <div class="imageBack">
 </div>
 

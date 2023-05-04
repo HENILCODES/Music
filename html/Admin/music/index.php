@@ -22,11 +22,10 @@
         <div class="container my-5 py-4">
 
             <div class="text-center">
-                <h2 class="fw-bold">Admin</h2>
+                <h2 class="fw-bold">Music</h2>
             </div>
-            <div class="text-end pb-4 d-flex justify-content-between">
+            <div class="text-end pb-4 d-flex justify-content-start">
                 <input type="search" autocomplete="off" class="form-control w-25 me-5" id="search" placeholder="search">
-                <button class="btn btn-success shadow" data-bs-toggle="modal" data-bs-target="#AddAdmin">Add</button>
             </div>
             <div class="overflow-auto" style="height: 600px;">
 
@@ -41,10 +40,12 @@
                     </thead>
                     <tbody id="Search_table" class="overflow-auto">
                         <?php
+                        $i=0;
                         while ($fetchArray = mysqli_fetch_array($resultMusic)) {
+                            $i++;
                         ?>
                             <tr>
-                                <td><?php echo $fetchArray['id'] ?></td>
+                                <td><?php echo $i; ?></td>
                                 <td><?php echo $fetchArray['name'] ?></td>
                                 <td><?php echo $fetchArray['language'] ?></td>
                                 <td> <audio src="/Music/storage/Audios/<?php echo $fetchArray['file'] ?>" controls> </audio></td>

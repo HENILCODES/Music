@@ -15,6 +15,7 @@
 </style>
 <body>
     <?php
+    session_start();
         include "html/master/nav.php";
     ?>
     <div class="invite">
@@ -27,7 +28,7 @@
             <div class="image1 image">
                 <div class="imgData">
                     <h1 class="h1" style="color: gold ;"> You can listen to music on that Web-Site.</h1>
-                    <a href="music.php"><button class="ImBut">Let's Go</button></a>
+                    <a href="/Music/html/music/"><button class="ImBut">Let's Go</button></a>
                 </div>
             </div>
         </div>
@@ -35,7 +36,7 @@
             <div class="image2 image">
                 <div class="imgData">
                     <h1 class="h1">You Can also Upload Your Music on That Web-Site.</h1>
-                    <a href="upload.php"><button class="ImBut">Upload Music</button></a>
+                    <a href="/Music/html/music/upload/"><button class="ImBut">Upload Music</button></a>
                 </div>
             </div>
         </div>
@@ -43,7 +44,7 @@
             <div class="image3 image">
                 <div class="imgData">
                     <h1 class="h1"> That Web-Site has some music. <br> You can also Download Music.</h1>
-                    <a href="Undersign.html"><button class="ImBut">Sign Up</button></a>
+                    <a href="/Music/html/user/signup/"><button class="ImBut">Sign Up</button></a>
                 </div>
             </div>
         </div>

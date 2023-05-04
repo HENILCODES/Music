@@ -13,6 +13,7 @@
 <?php
 include "master/nav.php";
 include "/opt/lampp/htdocs/Music/app/admin/Admin.php";
+include "/opt/lampp/htdocs/Music/app/user/User.php";
 
 $Admin = new Admin();
 $getMusic = $Admin->countTotlaRecored('musics');
@@ -21,12 +22,15 @@ $totalMusic = mysqli_fetch_array($getMusic);
 $getUsers = $Admin->countTotlaRecored('users');
 $totalUsers = mysqli_fetch_array($getUsers);
 
+$user = new User();
+$admin = $user->chechkOneValue('id',$_SESSION['ActiveAdminID']);
+$adminName = mysqli_fetch_array($admin);
 ?>
 <div class="container">
     <section style="background-color: #eee;" class="shadow ps-5 pe-5">
         <div class="container my-5 py-5">
             <div class="pb-5">
-                <h4> <span class="badge bg-success">Admin : </span> <b></b></h4>
+                <h4> <span class="badge bg-success">Admin : </span> <b><?php echo $adminName['name']; ?></b></h4>
             </div>
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 flex-wrap justify-content-evenly">
                 <div class="col mb-5">

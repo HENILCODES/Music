@@ -1,6 +1,6 @@
 <?php
-include "/opt/lampp/htdocs/Music/database/connection.php";
-include "/opt/lampp/htdocs/Music/database/adminsecurity.php";
+include_once "/opt/lampp/htdocs/Music/database/connection.php";
+include_once "/opt/lampp/htdocs/Music/database/adminsecurity.php";
 ?>
 <link rel="stylesheet" href="/Music/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">

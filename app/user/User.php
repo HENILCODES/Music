@@ -1,5 +1,5 @@
 <?php
-include "/opt/lampp/htdocs/Music/database/connection.php";
+include_once "/opt/lampp/htdocs/Music/database/connection.php";
 
 class User
 {
